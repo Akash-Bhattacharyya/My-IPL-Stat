@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPL Seasons</title>
+  <link rel="stylesheet" href="seasons.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>IPL SEASONS</h1>
+      <button onclick="goBack()" class="back-btn">← Back to Dashboard</button>
+    </header>
+
+    <section id="seasonButtons" class="seasons-grid">
+      <!-- Buttons for each season -->
+      <button class="season-btn" onclick="showSeasonDetails(2008)">2008</button>
+      <button class="season-btn" onclick="showSeasonDetails(2009)">2009</button>
+      <button class="season-btn" onclick="showSeasonDetails(2010)">2010</button>
+      <button class="season-btn" onclick="showSeasonDetails(2011)">2011</button>
+      <button class="season-btn" onclick="showSeasonDetails(2012)">2012</button>
+      <button class="season-btn" onclick="showSeasonDetails(2013)">2013</button>
+      <button class="season-btn" onclick="showSeasonDetails(2014)">2014</button>
+      <button class="season-btn" onclick="showSeasonDetails(2015)">2015</button>
+      <button class="season-btn" onclick="showSeasonDetails(2016)">2016</button>
+      <button class="season-btn" onclick="showSeasonDetails(2017)">2017</button>
+      <button class="season-btn" onclick="showSeasonDetails(2018)">2018</button>
+      <button class="season-btn" onclick="showSeasonDetails(2019)">2019</button>
+      <button class="season-btn" onclick="showSeasonDetails(2020)">2020</button>
+      <button class="season-btn" onclick="showSeasonDetails(2021)">2021</button>
+      <button class="season-btn" onclick="showSeasonDetails(2022)">2022</button>
+      <button class="season-btn" onclick="showSeasonDetails(2023)">2023</button>
+      <button class="season-btn" onclick="showSeasonDetails(2024)">2024</button>
+      <button class="season-btn" onclick="showSeasonDetails(2025)">2025</button>
+    </section>
+
+    <section id="seasonDetails" class="season-details" style="display: none;"></section>
+  </div>
+
+  <script src="seasonData.js"></script>
+  <script src="seasons.js"></script>
+</body>
+</html>

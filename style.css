@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #03004d, #010180, #0099b8);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Home Section */
+.home-section {
+  text-align: center;
+  padding: 60px 30px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+  border: 3px solid transparent;
+  animation: glow-border 2s linear infinite;
+}
+
+/* Glowing Border Animation */
+@keyframes glow-border {
+  0% {
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    border-color: #00d4ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff, 0 0 30px #00ffff, 0 0 40px #ffffff;
+    border-color: #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    border-color: #00d4ff;
+  }
+}
+
+.home-section:hover {
+  transform: translateY(-5px);
+}
+
+.main-heading {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-shadow: 2px 2px #000;
+}
+
+.ipl-logo {
+  display: block;
+  margin: 0 auto 30px auto;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.ipl-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Button Styling */
+.main-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-buttons button {
+  background: linear-gradient(135deg, #ff6e40, #ff3d00);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 61, 0, 0.4);
+}
+
+.main-buttons button:hover {
+  background: linear-gradient(135deg, #ff3d00, #ff6e40);
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(255, 61, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .ipl-logo {
+    height: 80px;
+  }
+
+  .main-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-buttons button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

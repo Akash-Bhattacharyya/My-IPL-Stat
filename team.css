@@ -1,0 +1,255 @@
+/* Header Section for Teams Page */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #050185, #0d0db3, #00d4ff);
+  padding-top: 20px;
+}
+
+/* Controls width for grid and details */
+.team-container {
+    max-width: 1200px;
+    width: 95%;
+    padding: 20px;
+    background: linear-gradient(135deg, #ece1ff, #f6f0ff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 3px solid transparent;
+    animation: glow-border 2s linear infinite;
+}
+
+@keyframes glow-border {
+  0% {
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    border-color: #00d4ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff, 0 0 30px #00ffff, 0 0 40px #ffffff;
+    border-color: #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    border-color: #00d4ff;
+  }
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Force 5 teams per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team-card {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1.5px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 20px;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-logo {
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Team Hover Color Themes */
+.team-csk:hover { background-color: yellow; color: blue; }
+.team-mi:hover { background-color: blue; color: gold; }
+.team-kkr:hover { background-color: #481F67; color: gold; }
+.team-rcb:hover { background-color: red; color: gold; }
+.team-srh:hover { background-color: orangered; color: black; }
+.team-gt:hover { background-color: rgb(1, 1, 73); color: aqua; }
+.team-rr:hover { background-color: rgb(235, 2, 204); color: blue; }
+.team-pbks:hover { background-color: red; color: gold; }
+.team-dc:hover { background-color: #00359E; color: red; }
+.team-lsg:hover { background-color: rgb(3, 3, 145); color: orangered; }
+
+/* Team Details Section */
+.team-details {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-top: 20px;
+}
+
+.team-title {
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.team-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-logo-wrapper {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.team-detail-logo {
+  height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.team-info {
+  flex: 2 1 400px;
+}
+
+.team-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 2.2;
+}
+
+.team-info ul li span {
+  font-weight: bold;
+  font-size: 1.45rem;
+}
+
+.team-info ul li strong {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+/* Back Button */
+.back-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+/* Team Color Themes (for Detail Section) */
+
+.team-details-csk { background: linear-gradient(135deg, #ffff88, yellow); color: blue; }
+.team-details-mi { background: linear-gradient(135deg, #0606ff, #0000a0); color: gold; }
+.team-details-kkr { background: linear-gradient(135deg, #5b1f8a, #481F67); color: gold; }
+.team-details-rcb { background: linear-gradient(135deg, #ff5c5c,  red); color: gold; }
+.team-details-srh { background: linear-gradient(135deg, #ff2600, orangered); color: black; }
+.team-details-gt { background: linear-gradient(135deg, #000074, #01014b); color: aqua; }
+.team-details-rr { background: linear-gradient(135deg, #ff2be3,#eb02cc); color: blue; }
+.team-details-pbks { background: linear-gradient(135deg, #ff4b4b, red); color: gold; }
+.team-details-dc { background: linear-gradient(135deg, #0055ff, #00359E); color: red; }
+.team-details-lsg { background: linear-gradient(135deg, #030391, #000064); color: orangered; }
+
+/* Header Style */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00264d;
+  color: white;
+  padding: 18px 28px;
+  border-radius: 15px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.5s ease-in-out;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.back-button {
+  background-color: white;
+  color: #00264d;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-detail-logo {
+    height: 120px;
+  }
+
+  .team-info ul {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Statistics</title>
+    <link rel="stylesheet" href="stat.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>IPL STATISTICS</h1>
+            <button onclick="goBack()" class="back-btn">← Back to Dashboard</button>
+        </header>
+
+        <!-- Button Grid -->
+        <section id="button-grid" class="stat-grid">
+            <button onclick="showStat('mostMatches', 'Most Matches')">Most Matches</button>
+            <button onclick="showStat('mostRuns', 'Most Runs')">Most Runs</button>
+            <button onclick="showStat('mostWickets', 'Most Wickets')">Most Wickets</button>
+            <button onclick="showStat('highestTeamTotal', 'Highest Team Total')">Highest Team Total</button>
+            <button onclick="showStat('lowestTeamTotal', 'Lowest Team Total')">Lowest Team Total</button>
+            <button onclick="showStat('highestScore', 'Highest Individual Score')">Highest Score</button>
+            <button onclick="showStat('bestBowlingFigure', 'Best Bowling Figure')">Best Bowling Figure</button>
+            <button onclick="showStat('most50s', 'Most 50s')">Most 50s</button>
+            <button onclick="showStat('most100s', 'Most 100s')">Most 100s</button>
+            <button onclick="showStat('most4s', 'Most 4s')">Most 4s</button>
+            <button onclick="showStat('most6s', 'Most 6s')">Most 6s</button>
+            <button onclick="showStat('highestPartnerships', 'Highest Partnerships')">Highest Partnerships</button>
+        </section>
+
+        <!-- Dynamic Stat Display Section -->
+        <section id="stat-display" class="stat-display" style="display: none;">
+            <button id="back-button" class="back-btn">← Back to Statistics Menu</button>
+            <h2 id="stat-title"></h2>
+            <div id="statContent"></div>
+        </section>
+    </div>
+
+    <script>
+        function goToDashboard() {
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="statData.js"></script>
+    <script src="stat.js"></script>
+</body>
+
+</html>

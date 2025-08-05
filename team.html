@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL TEAMS</title>
+    <link rel="stylesheet" href="team.css" />
+</head>
+
+<body>
+    <div class="team-container">
+        <header>
+            <h1>IPL TEAMS</h1>
+            <button onclick="goToDashboard()" class="back-btn">← Back to Dashboard</button>
+        </header>
+
+        <!-- Grid of teams -->
+        <section id="teamGrid" class="team-grid">
+            <div class="team-card team-csk" onclick="showTeamDetails('csk')">
+                <img src="Logo/csk.png" alt="CSK Logo" class="team-logo" />
+                <div class="team-name">CHENNAI SUPER KINGS</div>
+            </div>
+            <div class="team-card team-mi" onclick="showTeamDetails('mi')">
+                <img src="Logo/mi.png" alt="MI Logo" class="team-logo" />
+                <div class="team-name">MUMBAI INDIANS</div>
+            </div>
+            <div class="team-card team-kkr" onclick="showTeamDetails('kkr')">
+                <img src="Logo/kkr.png" alt="KKR Logo" class="team-logo" />
+                <div class="team-name">KOLKATA KNIGHT RIDERS</div>
+            </div>
+            <div class="team-card team-rcb" onclick="showTeamDetails('rcb')">
+                <img src="Logo/rcb.png" alt="RCB Logo" class="team-logo" />
+                <div class="team-name">ROYAL CHALLENGERS BENGALURU</div>
+            </div>
+            <div class="team-card team-srh" onclick="showTeamDetails('srh')">
+                <img src="Logo/srh.png" alt="SRH Logo" class="team-logo" />
+                <div class="team-name">SUNRISERS HYDERABAD</div>
+            </div>
+            <div class="team-card team-gt" onclick="showTeamDetails('gt')">
+                <img src="Logo/gt.png" alt="GT Logo" class="team-logo" />
+                <div class="team-name">GUJARAT TITANS</div>
+            </div>
+            <div class="team-card team-rr" onclick="showTeamDetails('rr')">
+                <img src="Logo/rr.png" alt="RR Logo" class="team-logo" />
+                <div class="team-name">RAJASTHAN ROYALS</div>
+            </div>
+            <div class="team-card team-pbks" onclick="showTeamDetails('pbks')">
+                <img src="Logo/pbks.png" alt="PBKS Logo" class="team-logo" />
+                <div class="team-name">PUNJAB KINGS</div>
+            </div>
+            <div class="team-card team-dc" onclick="showTeamDetails('dc')">
+                <img src="Logo/dc.png" alt="DC Logo" class="team-logo" />
+                <div class="team-name">DELHI CAPITALS</div>
+            </div>
+            <div class="team-card team-lsg" onclick="showTeamDetails('lsg')">
+                <img src="Logo/lsg.png" alt="LSG Logo" class="team-logo" />
+                <div class="team-name">LUCKNOW SUPER GIANTS</div>
+            </div>
+        </section>
+
+        <!-- Dynamic team detail section -->
+        <section id="teamDetails" class="team-details" style="display: none;">
+            <button onclick="goBack()" class="back-btn">← Back to Teams</button>
+            <!-- team detail content will be injected here -->
+        </section>
+    </div>
+
+    <!-- JS files -->
+    <script src="teams.js"></script>
+    <script src="team.js"></script>
+
+    <!-- Run team display on load -->
+    <script>
+        window.onload = function () {
+            document.getElementById("teamGrid").style.display = "grid";
+            document.getElementById("teamDetails").style.display = "none";
+        };
+    </script>
+</body>
+
+</html>

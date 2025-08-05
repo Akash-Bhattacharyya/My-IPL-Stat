@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IPL Awards</title>
+    <link rel="stylesheet" href="awards.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>IPL AWARDS</h1>
+            <button onclick="goToDashboard()" class="back-btn">← Back to Dashboard</button>
+        </header>
+
+        <!-- Award Buttons Grid -->
+        <div id="award-buttons">
+            <button onclick="showAward('winners')">Winners</button>
+            <button onclick="showAward('mvp')">MVP</button>
+            <button onclick="showAward('orangeCap')">Orange Cap</button>
+            <button onclick="showAward('purpleCap')">Purple Cap</button>
+            <button onclick="showAward('mostSixes')">Most Sixes</button>
+            <button onclick="showAward('emergingPlayer')">Emerging Player</button>
+            <button onclick="showAward('PlayeroftheFinal')">Player of The Final</button>
+            <button onclick="showAward('fairplayAward')">Fairplay Award</button>
+        </div>
+
+        <!-- Display Area for Award Cards -->
+        <div id="award-display"></div>
+
+        <!-- Back Button -->
+        <button id="back-button" style="display: none;" onclick="goBack()">← Back to Awards</button>
+    </div>
+
+    <script src="awardData.js"></script>
+    <script src="awards.js"></script>
+
+</body>
+
+</html>
