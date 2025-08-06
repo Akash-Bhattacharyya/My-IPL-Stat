@@ -24,6 +24,7 @@ body {
     box-shadow: 0 0 15px #0000001a;
     border: 3px solid transparent;
     animation: glow-border 2s linear infinite;
+    overflow-x: auto;
 }
 
 @keyframes glow-border {
@@ -93,6 +94,7 @@ header h1 {
 /* Stat Display Section */
 .stat-display {
     margin-top: 20px;
+    overflow-x: auto;
 }
 
 #stat-title {
@@ -103,10 +105,16 @@ header h1 {
 }
 
 /* Stats Table */
+#statContent {
+    overflow-x: auto;
+    width: 100%;
+}
+
 #statContent table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    min-width: 600px;
 }
 
 #statContent th, #statContent td {
@@ -129,6 +137,22 @@ header h1 {
     background-color: #e9f3ff;
 }
 
+/* Stat Table (Generic) */
+.stat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    min-width: 600px;
+}
+
+.stat-table th,
+.stat-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
 /* Responsive behavior */
 @media (max-width: 768px) {
     .stat-grid {
@@ -146,31 +170,26 @@ header h1 {
     }
 }
 
-.stat-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.stat-table th,
-.stat-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
 @media (max-width: 480px) {
-  .stat-grid {
-    gap: 10px;
-  }
+    .stat-grid {
+        gap: 10px;
+    }
 
-  #statContent th, #statContent td {
-    padding: 8px;
-    font-size: 14px;
-  }
+    .stat-grid button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
 
-  #stat-title {
-    font-size: 1.3rem;
-  }
+    #statContent th, #statContent td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    #stat-title {
+        font-size: 1.2rem;
+    }
+
+    .stat-table {
+        font-size: 0.9rem;
+    }
 }
