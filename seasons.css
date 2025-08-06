@@ -455,6 +455,7 @@ header h1 {
 
   .final-info-box {
     width: 100% !important;
+    text-align: center;
   }
 
   .final-bottom-row {
@@ -462,4 +463,5 @@ header h1 {
     align-items: center;
   }
 }
+
 
