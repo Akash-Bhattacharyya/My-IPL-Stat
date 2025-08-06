@@ -119,6 +119,7 @@ body {
   .main-buttons {
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* Center buttons in column */
   }
 
   .main-buttons button {
@@ -129,7 +130,6 @@ body {
   }
 }
 
-/* Responsive for Mobiles */
 @media (max-width: 480px) {
   .main-heading {
     font-size: 1.8rem;
@@ -137,6 +137,10 @@ body {
 
   .ipl-logo {
     height: 70px;
+  }
+
+  .main-buttons {
+    align-items: center; /* Ensure centering continues */
   }
 
   .main-buttons button {
