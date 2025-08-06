@@ -235,7 +235,7 @@ header h1 {
 /* Mobile - 480px */
 @media (max-width: 480px) {
     #award-buttons {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 14px;
     }
 
@@ -261,4 +261,5 @@ header h1 {
         padding: 10px;
     }
 }
+
 
