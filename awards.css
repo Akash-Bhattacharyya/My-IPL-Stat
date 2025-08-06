@@ -64,9 +64,9 @@ header h1 {
 /* Award Buttons Grid */
 #award-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 40px;
 }
 
@@ -86,37 +86,30 @@ header h1 {
     background: linear-gradient(135deg, #ffe96f, #ffd900);
     color: black;
 }
-
 #award-buttons button:nth-child(2) {
     background: linear-gradient(135deg, #bb1313, #630000);
     color: white;
 }
-
 #award-buttons button:nth-child(3) {
     background: linear-gradient(135deg, #fa802e, orangered);
     color: black;
 }
-
 #award-buttons button:nth-child(4) {
     background: linear-gradient(135deg, #860186, #3d013d);
     color: white;
 }
-
 #award-buttons button:nth-child(5) {
     background: linear-gradient(135deg, #1a0077, #12024d);
     color: white;
 }
-
 #award-buttons button:nth-child(6) {
     background: linear-gradient(135deg, #008116, #01440c);
     color: white;
 }
-
 #award-buttons button:nth-child(7) {
     background: linear-gradient(135deg, #0451e0, #0039a6);
     color: white;
 }
-
 #award-buttons button:nth-child(8) {
     background: linear-gradient(135deg, #f03056 , crimson);
     color: white;
@@ -153,44 +146,21 @@ header h1 {
 
 .award-card h3 {
     margin: 0 0 12px;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .award-card p {
     margin: 6px 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Award Card Colors */
-.card-mvp {
-    background: linear-gradient(135deg, #bb1313, #630000);
-    color: white;
-}
-
-.card-orange {
-    background: linear-gradient(135deg, #fa802e, orangered);
-    color: black;
-}
-
-.card-purple {
-    background: linear-gradient(135deg, #860186, #3d013d);
-    color: white;
-}
-
-.card-sixes {
-    background: linear-gradient(135deg, #1a0077, #12024d);
-    color: white;
-}
-
-.card-emerging {
-    background: linear-gradient(135deg, #008116, #01440c);
-    color: white;
-}
-
-.card-final {
-    background: linear-gradient(135deg, #0451e0, #0039a6);
-    color: white;
-}
+.card-mvp       { background: linear-gradient(135deg, #bb1313, #630000); color: white; }
+.card-orange    { background: linear-gradient(135deg, #fa802e, orangered); color: black; }
+.card-purple    { background: linear-gradient(135deg, #860186, #3d013d); color: white; }
+.card-sixes     { background: linear-gradient(135deg, #1a0077, #12024d); color: white; }
+.card-emerging  { background: linear-gradient(135deg, #008116, #01440c); color: white; }
+.card-final     { background: linear-gradient(135deg, #0451e0, #0039a6); color: white; }
 
 /* Team Logos */
 .team-logo {
@@ -219,44 +189,75 @@ header h1 {
 }
 
 /* Media Queries */
-@media (max-width: 992px) {
-    #award-display {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
+/* Tablet - 768px */
 @media (max-width: 768px) {
-    #award-display {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     #award-buttons {
         grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    #award-display {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .award-card {
         width: 160px;
     }
+
+    #award-buttons button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
 }
 
+/* Small Tablets - 600px */
 @media (max-width: 600px) {
+    #award-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
     #award-display {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    #award-buttons {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    #award-buttons {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .award-card {
+        width: 150px;
     }
 
     #award-buttons button {
         font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    #award-buttons {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    #award-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .award-card {
+        width: 140px;
         padding: 12px;
+    }
+
+    .award-card h3 {
+        font-size: 18px;
+    }
+
+    .award-card p {
+        font-size: 16px;
+    }
+
+    #award-buttons button {
+        font-size: 0.95rem;
+        padding: 10px;
     }
 }
