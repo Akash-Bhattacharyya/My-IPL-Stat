@@ -30,7 +30,6 @@ body {
   animation: glow-border 2s linear infinite;
 }
 
-/* Glowing Border Animation */
 @keyframes glow-border {
   0% {
     box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
@@ -64,6 +63,16 @@ body {
   height: 120px;
   object-fit: contain;
   transition: transform 0.3s ease;
+  animation: logo-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logo-glow {
+  0% {
+    filter: drop-shadow(0 0 5px #00e6ff) drop-shadow(0 0 10px #00e6ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px #00e6ff) drop-shadow(0 0 25px #00e6ff);
+  }
 }
 
 .ipl-logo:hover {
@@ -97,14 +106,14 @@ body {
   box-shadow: 0 6px 18px rgba(255, 61, 0, 0.6);
 }
 
-/* Responsive */
+/* Responsive for Tablets */
 @media (max-width: 768px) {
   .main-heading {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   .ipl-logo {
-    height: 80px;
+    height: 90px;
   }
 
   .main-buttons {
@@ -113,7 +122,25 @@ body {
   }
 
   .main-buttons button {
-    width: 100%;
+    width: 80%;
     font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+/* Responsive for Mobiles */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+
+  .ipl-logo {
+    height: 70px;
+  }
+
+  .main-buttons button {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 10px 18px;
   }
 }
