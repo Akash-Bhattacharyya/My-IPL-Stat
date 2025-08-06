@@ -389,110 +389,44 @@ header h1 {
 .team-KINGS-XI-PUNJAB { background: linear-gradient(135deg, #da0202, darkred); color: white; }
 .team-DECCAN-CHARGERS { background: linear-gradient(135deg, #000074, #01014b); color: white; }
 
+/* Two buttons per row on smaller screens */
 @media (max-width: 768px) {
-  .container {
-    padding: 20px;
-    margin: 20px 10px;
-    border-radius: 15px;
+  .season-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
   }
 
-  .season-details {
-    padding: 15px;
-    margin: 15px 10px;
-    border-radius: 12px;
-  }
-
-  .final-result-box {
-    font-size: 18px;
-    padding: 8px;
-    margin: 10px auto;
-  }
-
-  .final-label {
-     display: none;
-  }
-
-  .team-name {
-    font-size: 18px;
-    width: auto;
-  }
-
-  .score {
-    width: 80px;
-    font-size: 18px;
-  }
-
-  .final-box {
-    padding: 8px;
-    font-size: 16px;
-  }
-
-  .mvp-box {
-    min-width: 200px;
-    padding: 15px 10px;
-  }
-
-  .final-info-box {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .back-btn {
+  .season-btn2 {
     width: 100%;
     font-size: 14px;
-  }
-
-  .season-btn,
-  .season-btn2 {
-    font-size: 20px;
-    min-width: 180px;
-    max-width: 100%;
-    padding: 14px 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 15px;
-    margin: 15px 5px;
+  .season-buttons-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .season-btn,
   .season-btn2 {
-    font-size: 18px;
-    padding: 12px 16px;
+    font-size: 13px;
   }
 
-  .final-result-box {
-    font-size: 16px;
-    padding: 8px;
+  .position-boxes {
+    grid-template-columns: 1fr;
   }
 
-  .team-logo {
-    width: 60px;
-    height: 60px;
+  .detail-boxes {
+    grid-template-columns: 1fr;
   }
 
-  .team-name {
-    font-size: 16px;
+  .final-label, .final-info-box {
+    width: 100% !important;
   }
 
-  .score {
-    width: 70px;
-    font-size: 16px;
-  }
-
-  .final-info-box {
-    font-size: 15px;
-    padding: 8px;
-  }
-
-  .mvp-box {
-    min-width: 180px;
-    padding: 14px 10px;
-  }
-
-  .final-label {
-    display: none;
+  .final-bottom-row {
+    flex-direction: column;
+    align-items: center;
   }
 }
