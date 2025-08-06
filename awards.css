@@ -83,7 +83,7 @@ header h1 {
 
 /* Individual Button Colors */
 #award-buttons button:nth-child(1) {
-   background: linear-gradient(135deg, #ffe96f, #ffd900);
+    background: linear-gradient(135deg, #ffe96f, #ffd900);
     color: black;
 }
 
@@ -93,22 +93,22 @@ header h1 {
 }
 
 #award-buttons button:nth-child(3) {
-     background: linear-gradient(135deg, #fa802e, orangered);
+    background: linear-gradient(135deg, #fa802e, orangered);
     color: black;
 }
 
 #award-buttons button:nth-child(4) {
-     background: linear-gradient(135deg, #860186, #3d013d);
+    background: linear-gradient(135deg, #860186, #3d013d);
     color: white;
 }
 
 #award-buttons button:nth-child(5) {
-     background: linear-gradient(135deg, #1a0077, #12024d);
+    background: linear-gradient(135deg, #1a0077, #12024d);
     color: white;
 }
 
 #award-buttons button:nth-child(6) {
-     background: linear-gradient(135deg, #008116, #01440c);
+    background: linear-gradient(135deg, #008116, #01440c);
     color: white;
 }
 
@@ -118,7 +118,7 @@ header h1 {
 }
 
 #award-buttons button:nth-child(8) {
-    background: linear-gradient(135deg, #f03056 , crimson);;
+    background: linear-gradient(135deg, #f03056 , crimson);
     color: white;
 }
 
@@ -162,7 +162,6 @@ header h1 {
 }
 
 /* Award Card Colors */
-/*.card-winner { background-color: gold; color: black; }*/
 .card-mvp {
     background: linear-gradient(135deg, #bb1313, #630000);
     color: white;
@@ -193,7 +192,6 @@ header h1 {
     color: white;
 }
 
-/*.card-fairplay { background-color: crimson; color: white;}*/
 /* Team Logos */
 .team-logo {
     width: 90px;
@@ -205,7 +203,7 @@ header h1 {
 
 /* Back Button */
 #back-button {
-    margin: 30px auto 0 auto;;
+    margin: 30px auto 0 auto;
     padding: 10px 18px;
     background-color: #000000;
     color: white;
@@ -220,6 +218,7 @@ header h1 {
     background-color: #2d3236;
 }
 
+/* Media Queries */
 @media (max-width: 992px) {
     #award-display {
         grid-template-columns: repeat(3, 1fr);
@@ -240,7 +239,7 @@ header h1 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     #award-display {
         grid-template-columns: 1fr;
     }
@@ -250,13 +249,14 @@ header h1 {
     }
 }
 
-@media (max-width: 400px) {
-  .award-card {
-    width: 140px;
-    font-size: 16px;
-  }
+@media (max-width: 480px) {
+    #award-buttons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
-  header h1 {
-    font-size: 2rem;
-  }
+    #award-buttons button {
+        font-size: 1rem;
+        padding: 12px;
+    }
 }
