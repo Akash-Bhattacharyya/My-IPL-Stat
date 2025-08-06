@@ -242,6 +242,18 @@ body {
   .team-info ul {
     font-size: 1.1rem;
   }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .team-logo {
+    height: 80px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -249,7 +261,33 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .team-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .team-logo {
+    height: 70px;
+  }
+
+  .team-name {
+    font-size: 0.95rem;
+  }
+
   .team-title {
-    font-size: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .team-info ul {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .team-info ul li span {
+    font-size: 1.2rem;
+  }
+
+  .team-info ul li strong {
+    font-size: 1.1rem;
   }
 }
