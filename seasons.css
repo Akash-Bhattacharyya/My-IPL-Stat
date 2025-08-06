@@ -392,14 +392,15 @@ header h1 {
 /* Two buttons per row on smaller screens */
 @media (max-width: 768px) {
   .season-buttons-container {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    justify-content: center;
+    justify-items: center;
+    align-items: stretch;
   }
 
   .season-btn2 {
-    width: 100%;
+    width: 90%;
     font-size: 14px;
   }
 
@@ -414,11 +415,14 @@ header h1 {
 
 @media (max-width: 480px) {
   .season-buttons-container {
-     grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .season-btn2 {
     font-size: 13px;
+    width: 90%;
   }
 
   .position-boxes {
@@ -428,6 +432,7 @@ header h1 {
   .final-label {
     display: none;
   }
+
   .final-info-box {
     width: 100% !important;
   }
